@@ -13,9 +13,25 @@ echo "Unique age is : ";
 foreach($unique as $value){
     echo $value." ";
 }
+echo "<br>";
 
-//write a php script to combine two arrays and print the common elements from the following indexed arrays.
-//array diff
-//array intersect
+// Combine two arrays and print the common elements
+$array1 = array(1, 2, 3, 4, 5);
+$array2 = array(4, 5, 6, 7, 8);
+
+$common_elements = array_intersect($array1, $array2);
+echo "Common elements are: ";
+foreach($common_elements as $element){
+    echo $element." ";
+}
+echo "<br>";
+
+// Print elements that are in $array1 but not in $array2
+$diff_elements = array_diff($array1, $array2);
+echo "Elements in array1 but not in array2: ";
+foreach($diff_elements as $element){
+    echo $element." ";
+}
+echo "<br>";
 
 ?>
